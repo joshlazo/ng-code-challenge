@@ -17,7 +17,7 @@ import { UserService } from '../services/user.service';
   animations: [fadeInAnimation]
 })
 export class UserDetailComponent {
-  public readonly user$ = this.loadUser(Number(this.route.snapshot.paramMap.get('id')) ?? 0);
+  public readonly user$ = this.loadUser(Number(this.route.snapshot.paramMap.get('id')) ?? -1);
 
   constructor(
     private route: ActivatedRoute,
